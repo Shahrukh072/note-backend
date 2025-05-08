@@ -42,7 +42,7 @@ app.use((req, res, next) => {
 app.use('/api/health', healthCheck);
 
 // Routes
-app.use('/api/notes', require('./routes/notes.js'));
+app.use('/api/notes', notesRoutes);
 
 // Expose /metrics endpoint for Prometheus
 app.get('/metrics', async (req, res) => {
